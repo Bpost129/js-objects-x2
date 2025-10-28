@@ -1,7 +1,10 @@
 // object literal notation
+const midNum = 27
+
 const game = {
   title: "Guess the Number!",
-  biggestNum: 100,  
+  biggestNum: 100,
+  midNum,  
 }
 
 game.smallestNum = 1
