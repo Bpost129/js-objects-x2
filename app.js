@@ -10,8 +10,21 @@ delete game.numGuesses
 
 console.log(game)
 
+// for (let key in game) {
+//   console.log(`The value of the ${key} property is ${game[key]}`)
+// }
 
-const voteArr = ['yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'yes', 'no', 'no']
+Object.values(game).forEach(function(val) {
+  console.log(val)
+})
+
+
+
+
+
+
+
+// const voteArr = ['yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'yes', 'no', 'no']
 
 // function voteTallyDot(arr) {
 //   const tally = { yes: 0, no: 0 }
@@ -25,20 +38,19 @@ const voteArr = ['yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'yes', 'no', 'no']
 
 // console.log(voteTallyDot(voteArr))
 
-function voteTallySquare(arr) {
-  const tally = {}
-  for (let i = 0; i < arr.length; i++) {
-    const vote = arr[i]
-    if (tally[vote]) tally[vote]++
-    else tally[vote] = 1
-  }
+// function voteTallySquare(arr) {
+//   const tally = {}
+//   for (let i = 0; i < arr.length; i++) {
+//     const vote = arr[i]
+//     if (tally[vote]) tally[vote]++
+//     else tally[vote] = 1
+//   }
 
-  return tally
-}
+//   return tally
+// }
 
 
-console.log(voteTallySquare(voteArr))
+// console.log(voteTallySquare(voteArr))
 
-for (let key in game) {
-  console.log(`The value of the ${key} property is ${game[key]}`)
-}
+
+
