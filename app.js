@@ -6,5 +6,35 @@ const game = {
 
 game.smallestNum = 1
 game.numGuesses = 0
+delete game.numGuesses
 
 console.log(game)
+
+
+const voteArr = ['yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'yes', 'no', 'no']
+
+// function voteTallyDot(arr) {
+//   const tally = { yes: 0, no: 0 }
+//   for (let i = 0; i < arr.length; i++) {
+//     const vote = arr[i]
+//     if (vote === 'yes') tally.yes++
+//     else tally.no++
+//   }
+//   return tally
+// }
+
+// console.log(voteTallyDot(voteArr))
+
+function voteTallySquare(arr) {
+  const tally = {}
+  for (let i = 0; i < arr.length; i++) {
+    const vote = arr[i]
+    if (tally[vote]) tally[vote]++
+    else tally[vote] = 1
+  }
+
+  return tally
+}
+
+
+console.log(voteTallySquare(voteArr))
