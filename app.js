@@ -38,3 +38,7 @@ function voteTallySquare(arr) {
 
 
 console.log(voteTallySquare(voteArr))
+
+for (let key in game) {
+  console.log(`The value of the ${key} property is ${game[key]}`)
+}
