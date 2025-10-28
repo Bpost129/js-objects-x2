@@ -16,21 +16,42 @@ game.play = function() {
 }
 game.play()
 
-console.log(game)
+// console.log(game)
 
 // for (let key in game) {
 //   console.log(`The value of the ${key} property is ${game[key]}`)
 // }
 
-Object.values(game).forEach(function(val) {
-  console.log(val)
-})
+// Object.values(game).forEach(function(val) {
+//   console.log(val)
+// })
 
 
 
+const voters = [
+  { name: 'Kuzco', vote: 'yes' },
+  { name: 'Pacha', vote: 'yes' },
+  { name: 'Yzma', vote: 'no' },
+  { name: 'Kronk', vote: 'yes' },
+  { name: 'Chicha', vote: 'yes' },
+  { name: 'Bucky the Squirrel', vote: 'yes' },
+]
 
+function votersTally(arr) {
+  const tally = { names: [] }
+  for (let i = 0; i < arr.length; i++) {
+    const voter = arr[i]
+    tally.names.push(voter.name)
 
+    if (tally[voter.vote]) tally[voter.vote] += 1
+    else tally[voter.vote] = 1
+  }
 
+  return tally
+}
+
+let voteTotal = votersTally(voters)
+console.log(voteTotal)
 
 // const voteArr = ['yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'yes', 'no', 'no']
 
