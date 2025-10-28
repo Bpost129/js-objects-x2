@@ -7,6 +7,11 @@ const game = {
 game.smallestNum = 1
 game.numGuesses = 0
 delete game.numGuesses
+game.play = function() {
+  this.secretNum = Math.floor(Math.random() * 
+    (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
+}
+game.play()
 
 console.log(game)
 
